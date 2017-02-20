@@ -1,0 +1,5 @@
+*.log
+*sublime*
+node_modules/
+build/
+build-example/

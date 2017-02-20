@@ -1,0 +1,24 @@
+{
+  "presets": [
+    ["latest", {
+      "es2015": {
+        // webpack SHOULD understands the native import syntax, and uses it for tree shaking
+        // for some reason it throws errors so it's commented out for now
+        "modules": false,
+        "loose": true
+      }
+    }],
+
+    "stage-0",
+    // Specifies what level of language features to activate.
+    // Stage 2 is "draft", 4 is finished, 0 is strawman.
+    // See https://tc39.github.io/process-document/
+  ],
+  "plugins": [
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true, 
+    }],
+  ]
+}
